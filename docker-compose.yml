@@ -1,52 +1,47 @@
+version: '3.8'
+
 services:
-  # -------------------------------
-  # 1. MAVERICK HUNTER (Full Stack)
-  # -------------------------------
+  # 1. El Núcleo (Gestión de Candidatos)
   maverick-backend:
-    build: 
-      context: ./maverick-hunter/backend
+    build: ./maverick-hunter/backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./maverick-hunter/backend:/app
-    environment:
-      - DATABASE_URL=sqlite:///./maverick.db
     networks:
       - dark-agency-net
+    volumes:
+      - ./maverick-hunter/backend/app:/app/app
 
+  # 2. La Interfaz Visual
   maverick-frontend:
-    build: 
-      context: ./maverick-hunter/frontend
+    build: ./maverick-hunter/frontend
     ports:
-      - "5173:5173"
+      - "3000:3000"
+    networks:
+      - dark-agency-net
     depends_on:
       - maverick-backend
-    networks:
-      - dark-agency-net
 
-  # -------------------------------
-  # 2. FOUNDER RISK AI (Inteligencia)
-  # -------------------------------
+  # 3. Motor de Riesgo Fundador (IVR)
   founder-risk-api:
-    build: 
-      context: ./founder-risk-ai/backend
+    build: ./founder-risk-api/backend
     ports:
-      - "8001:8000" # Mapeamos al 8001 para no chocar
-    volumes:
-      - ./founder-risk-ai/backend:/app
+      - "8001:8000"
     networks:
       - dark-agency-net
 
-  # -------------------------------
-  # 3. STRESS TEST (Simulación)
-  # -------------------------------
+  # 4. Motor de Stress Test Climático (Tu primer éxito de hoy)
   stress-test-engine:
-    build: 
-      context: ./stress-test/backend
+    build: ./stress-test/backend
     ports:
-      - "8002:8000" # Mapeamos al 8002
-    volumes:
-      - ./stress-test/backend:/app
+      - "8002:8000"
+    networks:
+      - dark-agency-net
+
+  # 5. NUEVO: Motor Cuantitativo (Red Neuronal Black-Scholes)
+  quant-engine:
+    build: ./quant-engine
+    ports:
+      - "8003:8000"
     networks:
       - dark-agency-net
 
