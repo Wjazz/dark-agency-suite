@@ -1,119 +1,75 @@
-"""
-Database Models for Maverick Hunter
-"""
-
 from datetime import datetime
-from typing import Optional
-from sqlalchemy import Column, String, Integer, Float, DateTime, ForeignKey, Enum as SQLEnum, JSON
-from sqlalchemy.dialects.postgresql import UUID
+from typing import Optional, List
+from sqlalchemy import Column, String, Integer, Float, DateTime, ForeignKey, Enum as SQLEnum, JSON, Text, Boolean
 from sqlalchemy.orm import relationship
 import uuid
 import enum
+from pydantic import BaseModel as PydanticBaseModel
 
-from app.models.database import Base
+# Importamos el GUID personalizado
+from .database import Base, GUID
 
-
+# --- Enums ---
 class AssessmentStatus(str, enum.Enum):
     PENDING = "pending"
-    IN_PROGRESS = "in_progress"
     COMPLETED = "completed"
-    EXPIRED = "expired"
+    FAILED = "failed"
 
-
-class CandidateClassification(str, enum.Enum):
-    MAVERICK = "MAVERICK"
-    PERFORMER = "PERFORMER"
-    RELIABLE = "RELIABLE"
-    MONITOR = "MONITOR"
-    RISK = "RISK"
-
+# --- Modelos SQLAlchemy (Base de Datos) ---
 
 class Company(Base):
     __tablename__ = "companies"
-    
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    name = Column(String(200), nullable=False)
-    email = Column(String(255), unique=True, nullable=False)
-    api_key = Column(String(64), unique=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    assessments = relationship("Assessment", back_populates="company")
-
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    name = Column(String, unique=True)
+    api_key = Column(String, unique=True)
+    is_active = Column(Integer, default=1)
 
 class Candidate(Base):
     __tablename__ = "candidates"
-    
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    email = Column(String(255), unique=True, nullable=False)
-    name = Column(String(200))
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    email = Column(String, unique=True, index=True)
+    full_name = Column(String)
+    phone = Column(String, nullable=True)
+    linkedin_url = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
     
+    # Relaciones
+    results = relationship("AssessmentResult", back_populates="candidate")
     assessments = relationship("Assessment", back_populates="candidate")
-
 
 class Assessment(Base):
     __tablename__ = "assessments"
-    
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    candidate_id = Column(UUID(as_uuid=True), ForeignKey("candidates.id"), nullable=False)
-    company_id = Column(UUID(as_uuid=True), ForeignKey("companies.id"), nullable=False)
-    
-    status = Column(SQLEnum(AssessmentStatus), default=AssessmentStatus.PENDING)
-    access_token = Column(String(64), unique=True)  # For candidate access
-    
-    started_at = Column(DateTime)
-    completed_at = Column(DateTime)
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    candidate_id = Column(GUID(), ForeignKey("candidates.id"))
+    status = Column(String, default="pending")
     created_at = Column(DateTime, default=datetime.utcnow)
     
-    # Relationships
     candidate = relationship("Candidate", back_populates="assessments")
-    company = relationship("Company", back_populates="assessments")
-    responses = relationship("Response", back_populates="assessment")
-    result = relationship("Result", back_populates="assessment", uselist=False)
 
+class AssessmentResult(Base):
+    __tablename__ = "assessment_results"
+    id = Column(GUID(), primary_key=True, default=uuid.uuid4)
+    candidate_id = Column(GUID(), ForeignKey("candidates.id"))
+    narcissism_score = Column(Float)
+    machiavellianism_score = Column(Float)
+    psychopathy_score = Column(Float)
+    sadism_score = Column(Float)
+    openness = Column(Float)
+    conscientiousness = Column(Float)
+    extraversion = Column(Float)
+    agreeableness = Column(Float)
+    neuroticism = Column(Float)
+    risk_level = Column(String)
+    raw_data = Column(JSON)
+    timestamp = Column(DateTime, default=datetime.utcnow)
 
-class Response(Base):
-    __tablename__ = "responses"
-    
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    assessment_id = Column(UUID(as_uuid=True), ForeignKey("assessments.id"), nullable=False)
-    
-    item_code = Column(String(20), nullable=False)
-    response = Column(Integer, nullable=False)  # 1-5 Likert
-    response_time_ms = Column(Integer)  # Time to answer
-    
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    assessment = relationship("Assessment", back_populates="responses")
+    candidate = relationship("Candidate", back_populates="results")
 
+# --- Alias para compatibilidad con código legacy ---
+# Si tu código viejo busca "Result", le damos "AssessmentResult"
+Result = AssessmentResult
 
-class Result(Base):
-    __tablename__ = "results"
-    
-    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    assessment_id = Column(UUID(as_uuid=True), ForeignKey("assessments.id"), unique=True, nullable=False)
-    
-    # Raw construct scores
-    narcissism = Column(Float)
-    machiavellianism = Column(Float)
-    psychopathy = Column(Float)
-    sadism = Column(Float)
-    vigilance = Column(Float)
-    psycap = Column(Float)
-    
-    # Bifactor outputs
-    g_factor = Column(Float)
-    s_agency = Column(Float)
-    
-    # Classification
-    classification = Column(SQLEnum(CandidateClassification))
-    confidence = Column(Float)
-    
-    # Predictions
-    eib_prediction = Column(Float)
-    cwb_o_risk = Column(Float)
-    cwb_i_risk = Column(Float)
-    
-    created_at = Column(DateTime, default=datetime.utcnow)
-    
-    assessment = relationship("Assessment", back_populates="result")
+# --- Modelos Pydantic (Validación API) ---
+class Response(PydanticBaseModel):
+    question_id: str
+    answer_value: int
