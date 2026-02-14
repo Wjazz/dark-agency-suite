@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # 1. El Núcleo (Gestión de Candidatos)
+  # 1. Backend Principal
   maverick-backend:
     build: ./maverick-hunter/backend
     ports:
@@ -11,7 +11,7 @@ services:
     volumes:
       - ./maverick-hunter/backend/app:/app/app
 
-  # 2. La Interfaz Visual
+  # 2. Frontend
   maverick-frontend:
     build: ./maverick-hunter/frontend
     ports:
@@ -21,7 +21,7 @@ services:
     depends_on:
       - maverick-backend
 
-  # 3. Motor de Riesgo Fundador (IVR)
+  # 3. Riesgo Fundador
   founder-risk-api:
     build: ./founder-risk-api/backend
     ports:
@@ -29,7 +29,7 @@ services:
     networks:
       - dark-agency-net
 
-  # 4. Motor de Stress Test Climático (Tu primer éxito de hoy)
+  # 4. Stress Test Climático
   stress-test-engine:
     build: ./stress-test/backend
     ports:
@@ -37,11 +37,27 @@ services:
     networks:
       - dark-agency-net
 
-  # 5. NUEVO: Motor Cuantitativo (Red Neuronal Black-Scholes)
+  # 5. Quant Engine (Red Neuronal)
   quant-engine:
     build: ./quant-engine
     ports:
       - "8003:8000"
+    networks:
+      - dark-agency-net
+
+  # 6. Strategy Engine (Teoría de Juegos)
+  strategy-engine:
+    build: ./strategy-engine
+    ports:
+      - "8004:8000"
+    networks:
+      - dark-agency-net
+
+  # 7. NUEVO: Causal Engine (Econometría Avanzada)
+  causal-engine:
+    build: ./causal-engine
+    ports:
+      - "8005:8000"
     networks:
       - dark-agency-net
 
