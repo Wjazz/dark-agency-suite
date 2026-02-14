@@ -1,0 +1,1363 @@
+=========================================================
+       MOTOR BPMN - PROCESO DE RECLUTAMIENTO           
+   De Grafico (Bizagi) a Codigo (C++ con OOP)          
+=========================================================
+
+[CONFIG] Configuracion de Recursos:
+  - Analista JR: 5 personas a $10/hora
+  - Gerente Lider: 5 personas a $50/hora
+
+[SIMULACION] Iniciando simulacion con 100 candidatos...
+-----------------------------------------------------
+
+================================================
+  SIMULACION: Proceso de Reclutamiento y Selecci├│n
+  Candidatos: 100
+================================================
+
+
+--- Candidato #1 ---
+[>>] Candidato #1 inicia proceso en t=0
+  -> [Recibir hoja de vida] Candidato #1 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #1 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #1 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #1 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #1 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #1 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #1 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #1 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #1 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #1 procesado en 30 min por AnalistaJR
+[END] Candidato #1 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #2 ---
+[>>] Candidato #2 inicia proceso en t=1
+  -> [Recibir hoja de vida] Candidato #2 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #2 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #2 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #2 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #3 ---
+[>>] Candidato #3 inicia proceso en t=2
+  -> [Recibir hoja de vida] Candidato #3 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #3 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #3 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #3 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #4 ---
+[>>] Candidato #4 inicia proceso en t=3
+  -> [Recibir hoja de vida] Candidato #4 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #4 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #4 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #4 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #5 ---
+[>>] Candidato #5 inicia proceso en t=4
+  -> [Recibir hoja de vida] Candidato #5 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #5 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #5 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #5 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #5 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #5 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #5 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #6 ---
+[>>] Candidato #6 inicia proceso en t=5
+  -> [Recibir hoja de vida] Candidato #6 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #6 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #6 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #6 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #6 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #6 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #6 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #6 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #6 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #6 procesado en 30 min por AnalistaJR
+[END] Candidato #6 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #7 ---
+[>>] Candidato #7 inicia proceso en t=6
+  -> [Recibir hoja de vida] Candidato #7 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #7 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #7 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #7 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #7 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #7 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #7 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #8 ---
+[>>] Candidato #8 inicia proceso en t=7
+  -> [Recibir hoja de vida] Candidato #8 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #8 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #8 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #8 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #8 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #8 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #8 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #8 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Rechazado
+[END] Candidato #8 termina: No acept├│ oferta (ciclo: 2972 min)
+
+--- Candidato #9 ---
+[>>] Candidato #9 inicia proceso en t=8
+  -> [Recibir hoja de vida] Candidato #9 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #9 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #9 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #9 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #10 ---
+[>>] Candidato #10 inicia proceso en t=9
+  -> [Recibir hoja de vida] Candidato #10 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #10 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #10 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #10 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #11 ---
+[>>] Candidato #11 inicia proceso en t=10
+  -> [Recibir hoja de vida] Candidato #11 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #11 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #11 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #11 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #12 ---
+[>>] Candidato #12 inicia proceso en t=11
+  -> [Recibir hoja de vida] Candidato #12 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #12 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #12 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #12 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #13 ---
+[>>] Candidato #13 inicia proceso en t=12
+  -> [Recibir hoja de vida] Candidato #13 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #13 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #13 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #13 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #13 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #13 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #13 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #13 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #13 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #13 procesado en 30 min por AnalistaJR
+[END] Candidato #13 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #14 ---
+[>>] Candidato #14 inicia proceso en t=13
+  -> [Recibir hoja de vida] Candidato #14 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #14 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #15 ---
+[>>] Candidato #15 inicia proceso en t=14
+  -> [Recibir hoja de vida] Candidato #15 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #15 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #15 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #15 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #15 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #15 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #15 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #15 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #15 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #15 procesado en 30 min por AnalistaJR
+[END] Candidato #15 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #16 ---
+[>>] Candidato #16 inicia proceso en t=15
+  -> [Recibir hoja de vida] Candidato #16 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #16 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #17 ---
+[>>] Candidato #17 inicia proceso en t=16
+  -> [Recibir hoja de vida] Candidato #17 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #17 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #17 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #17 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #17 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #17 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #17 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #17 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #17 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #17 procesado en 30 min por AnalistaJR
+[END] Candidato #17 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #18 ---
+[>>] Candidato #18 inicia proceso en t=17
+  -> [Recibir hoja de vida] Candidato #18 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #18 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #18 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #18 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #18 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #18 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #18 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #19 ---
+[>>] Candidato #19 inicia proceso en t=18
+  -> [Recibir hoja de vida] Candidato #19 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #19 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #20 ---
+[>>] Candidato #20 inicia proceso en t=19
+  -> [Recibir hoja de vida] Candidato #20 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #20 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #20 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #20 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #20 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #20 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #20 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #20 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #20 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #20 procesado en 30 min por AnalistaJR
+[END] Candidato #20 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #21 ---
+[>>] Candidato #21 inicia proceso en t=20
+  -> [Recibir hoja de vida] Candidato #21 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #21 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #21 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #21 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #22 ---
+[>>] Candidato #22 inicia proceso en t=21
+  -> [Recibir hoja de vida] Candidato #22 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #22 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #22 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #22 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #22 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #22 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #22 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #22 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #22 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #22 procesado en 30 min por AnalistaJR
+[END] Candidato #22 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #23 ---
+[>>] Candidato #23 inicia proceso en t=22
+  -> [Recibir hoja de vida] Candidato #23 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #23 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #23 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #23 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #23 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #23 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #23 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #23 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #23 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #23 procesado en 30 min por AnalistaJR
+[END] Candidato #23 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #24 ---
+[>>] Candidato #24 inicia proceso en t=23
+  -> [Recibir hoja de vida] Candidato #24 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #24 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #24 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #24 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #24 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #24 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #24 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #24 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Rechazado
+[END] Candidato #24 termina: No acept├│ oferta (ciclo: 2972 min)
+
+--- Candidato #25 ---
+[>>] Candidato #25 inicia proceso en t=24
+  -> [Recibir hoja de vida] Candidato #25 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #25 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #25 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #25 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #25 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #25 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #25 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #25 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #25 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #25 procesado en 30 min por AnalistaJR
+[END] Candidato #25 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #26 ---
+[>>] Candidato #26 inicia proceso en t=25
+  -> [Recibir hoja de vida] Candidato #26 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #26 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #26 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #26 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #27 ---
+[>>] Candidato #27 inicia proceso en t=26
+  -> [Recibir hoja de vida] Candidato #27 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #27 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #27 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #27 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #27 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #27 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #27 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #27 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #27 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #27 procesado en 30 min por AnalistaJR
+[END] Candidato #27 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #28 ---
+[>>] Candidato #28 inicia proceso en t=27
+  -> [Recibir hoja de vida] Candidato #28 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #28 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #28 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #28 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #28 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #28 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Aprobado
+[END] Candidato #28 termina: Referido a otro puesto (ciclo: 212 min)
+
+--- Candidato #29 ---
+[>>] Candidato #29 inicia proceso en t=28
+  -> [Recibir hoja de vida] Candidato #29 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #29 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #29 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #29 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #30 ---
+[>>] Candidato #30 inicia proceso en t=29
+  -> [Recibir hoja de vida] Candidato #30 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #30 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #30 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #30 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #30 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #30 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #30 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #31 ---
+[>>] Candidato #31 inicia proceso en t=30
+  -> [Recibir hoja de vida] Candidato #31 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #31 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #31 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #31 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #32 ---
+[>>] Candidato #32 inicia proceso en t=31
+  -> [Recibir hoja de vida] Candidato #32 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #32 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #32 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #32 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #32 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #32 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #32 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #32 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #32 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #32 procesado en 30 min por AnalistaJR
+[END] Candidato #32 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #33 ---
+[>>] Candidato #33 inicia proceso en t=32
+  -> [Recibir hoja de vida] Candidato #33 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #33 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #33 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #33 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #33 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #33 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #33 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #33 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #33 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #33 procesado en 30 min por AnalistaJR
+[END] Candidato #33 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #34 ---
+[>>] Candidato #34 inicia proceso en t=33
+  -> [Recibir hoja de vida] Candidato #34 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #34 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #34 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #34 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #34 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #34 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #34 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #34 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #34 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #34 procesado en 30 min por AnalistaJR
+[END] Candidato #34 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #35 ---
+[>>] Candidato #35 inicia proceso en t=34
+  -> [Recibir hoja de vida] Candidato #35 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #35 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #35 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #35 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #35 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #35 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #35 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #35 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #35 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #35 procesado en 30 min por AnalistaJR
+[END] Candidato #35 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #36 ---
+[>>] Candidato #36 inicia proceso en t=35
+  -> [Recibir hoja de vida] Candidato #36 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #36 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #36 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #36 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #36 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #36 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #36 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #36 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #36 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #36 procesado en 30 min por AnalistaJR
+[END] Candidato #36 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #37 ---
+[>>] Candidato #37 inicia proceso en t=36
+  -> [Recibir hoja de vida] Candidato #37 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #37 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #37 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #37 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #37 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #37 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #37 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #37 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #37 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #37 procesado en 30 min por AnalistaJR
+[END] Candidato #37 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #38 ---
+[>>] Candidato #38 inicia proceso en t=37
+  -> [Recibir hoja de vida] Candidato #38 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #38 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #38 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #38 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #38 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #38 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #38 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #39 ---
+[>>] Candidato #39 inicia proceso en t=38
+  -> [Recibir hoja de vida] Candidato #39 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #39 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #39 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #39 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #39 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #39 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #39 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #39 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #39 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #39 procesado en 30 min por AnalistaJR
+[END] Candidato #39 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #40 ---
+[>>] Candidato #40 inicia proceso en t=39
+  -> [Recibir hoja de vida] Candidato #40 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #40 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #40 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #40 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #40 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #40 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #40 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #40 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #40 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #40 procesado en 30 min por AnalistaJR
+[END] Candidato #40 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #41 ---
+[>>] Candidato #41 inicia proceso en t=40
+  -> [Recibir hoja de vida] Candidato #41 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #41 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #41 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #41 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #41 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #41 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #41 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #42 ---
+[>>] Candidato #42 inicia proceso en t=41
+  -> [Recibir hoja de vida] Candidato #42 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #42 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #42 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #42 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #42 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #42 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #42 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #42 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #42 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #42 procesado en 30 min por AnalistaJR
+[END] Candidato #42 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #43 ---
+[>>] Candidato #43 inicia proceso en t=42
+  -> [Recibir hoja de vida] Candidato #43 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #43 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #43 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #43 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #44 ---
+[>>] Candidato #44 inicia proceso en t=43
+  -> [Recibir hoja de vida] Candidato #44 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #44 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #44 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #44 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #44 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #44 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #44 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #44 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #44 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #44 procesado en 30 min por AnalistaJR
+[END] Candidato #44 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #45 ---
+[>>] Candidato #45 inicia proceso en t=44
+  -> [Recibir hoja de vida] Candidato #45 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #45 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #45 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #45 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #46 ---
+[>>] Candidato #46 inicia proceso en t=45
+  -> [Recibir hoja de vida] Candidato #46 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #46 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #46 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #46 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #46 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #46 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #46 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #46 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #46 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #46 procesado en 30 min por AnalistaJR
+[END] Candidato #46 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #47 ---
+[>>] Candidato #47 inicia proceso en t=46
+  -> [Recibir hoja de vida] Candidato #47 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #47 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #48 ---
+[>>] Candidato #48 inicia proceso en t=47
+  -> [Recibir hoja de vida] Candidato #48 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #48 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #49 ---
+[>>] Candidato #49 inicia proceso en t=48
+  -> [Recibir hoja de vida] Candidato #49 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #49 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #49 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #49 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #50 ---
+[>>] Candidato #50 inicia proceso en t=49
+  -> [Recibir hoja de vida] Candidato #50 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #50 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #50 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #50 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #50 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #50 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #50 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #50 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #50 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #50 procesado en 30 min por AnalistaJR
+[END] Candidato #50 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #51 ---
+[>>] Candidato #51 inicia proceso en t=50
+  -> [Recibir hoja de vida] Candidato #51 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #51 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #51 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #51 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #52 ---
+[>>] Candidato #52 inicia proceso en t=51
+  -> [Recibir hoja de vida] Candidato #52 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #52 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #52 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #52 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #52 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #52 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #52 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #52 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #52 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #52 procesado en 30 min por AnalistaJR
+[END] Candidato #52 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #53 ---
+[>>] Candidato #53 inicia proceso en t=52
+  -> [Recibir hoja de vida] Candidato #53 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #53 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #53 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #53 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #53 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #53 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #53 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #53 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #53 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #53 procesado en 30 min por AnalistaJR
+[END] Candidato #53 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #54 ---
+[>>] Candidato #54 inicia proceso en t=53
+  -> [Recibir hoja de vida] Candidato #54 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #54 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #54 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #54 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #54 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #54 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #54 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #55 ---
+[>>] Candidato #55 inicia proceso en t=54
+  -> [Recibir hoja de vida] Candidato #55 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #55 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #55 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #55 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #56 ---
+[>>] Candidato #56 inicia proceso en t=55
+  -> [Recibir hoja de vida] Candidato #56 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #56 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #56 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #56 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #57 ---
+[>>] Candidato #57 inicia proceso en t=56
+  -> [Recibir hoja de vida] Candidato #57 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #57 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #57 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #57 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #57 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #57 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #57 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #57 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #57 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #57 procesado en 30 min por AnalistaJR
+[END] Candidato #57 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #58 ---
+[>>] Candidato #58 inicia proceso en t=57
+  -> [Recibir hoja de vida] Candidato #58 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #58 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #58 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #58 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #59 ---
+[>>] Candidato #59 inicia proceso en t=58
+  -> [Recibir hoja de vida] Candidato #59 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #59 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #59 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #59 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #59 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #59 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #59 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #60 ---
+[>>] Candidato #60 inicia proceso en t=59
+  -> [Recibir hoja de vida] Candidato #60 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #60 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #60 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #60 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #60 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #60 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #60 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #60 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #60 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #60 procesado en 30 min por AnalistaJR
+[END] Candidato #60 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #61 ---
+[>>] Candidato #61 inicia proceso en t=60
+  -> [Recibir hoja de vida] Candidato #61 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #61 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #61 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #61 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #62 ---
+[>>] Candidato #62 inicia proceso en t=61
+  -> [Recibir hoja de vida] Candidato #62 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #62 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #62 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #62 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #62 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #62 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #62 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #63 ---
+[>>] Candidato #63 inicia proceso en t=62
+  -> [Recibir hoja de vida] Candidato #63 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #63 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #63 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #63 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #64 ---
+[>>] Candidato #64 inicia proceso en t=63
+  -> [Recibir hoja de vida] Candidato #64 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #64 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #65 ---
+[>>] Candidato #65 inicia proceso en t=64
+  -> [Recibir hoja de vida] Candidato #65 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #65 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #66 ---
+[>>] Candidato #66 inicia proceso en t=65
+  -> [Recibir hoja de vida] Candidato #66 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #66 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #66 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #66 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #66 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #66 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #66 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #66 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #66 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #66 procesado en 30 min por AnalistaJR
+[END] Candidato #66 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #67 ---
+[>>] Candidato #67 inicia proceso en t=66
+  -> [Recibir hoja de vida] Candidato #67 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #67 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #67 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #67 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #67 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #67 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #67 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #68 ---
+[>>] Candidato #68 inicia proceso en t=67
+  -> [Recibir hoja de vida] Candidato #68 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #68 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #68 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #68 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #69 ---
+[>>] Candidato #69 inicia proceso en t=68
+  -> [Recibir hoja de vida] Candidato #69 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #69 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #69 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #69 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #70 ---
+[>>] Candidato #70 inicia proceso en t=69
+  -> [Recibir hoja de vida] Candidato #70 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #70 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #70 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #70 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #71 ---
+[>>] Candidato #71 inicia proceso en t=70
+  -> [Recibir hoja de vida] Candidato #71 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #71 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #71 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #71 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #72 ---
+[>>] Candidato #72 inicia proceso en t=71
+  -> [Recibir hoja de vida] Candidato #72 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #72 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #72 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #72 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #73 ---
+[>>] Candidato #73 inicia proceso en t=72
+  -> [Recibir hoja de vida] Candidato #73 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #73 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #73 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #73 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #74 ---
+[>>] Candidato #74 inicia proceso en t=73
+  -> [Recibir hoja de vida] Candidato #74 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #74 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #74 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #74 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #75 ---
+[>>] Candidato #75 inicia proceso en t=74
+  -> [Recibir hoja de vida] Candidato #75 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #75 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #75 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #75 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #75 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #75 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #75 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #76 ---
+[>>] Candidato #76 inicia proceso en t=75
+  -> [Recibir hoja de vida] Candidato #76 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #76 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #76 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #76 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #76 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #76 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Aprobado
+[END] Candidato #76 termina: Referido a otro puesto (ciclo: 212 min)
+
+--- Candidato #77 ---
+[>>] Candidato #77 inicia proceso en t=76
+  -> [Recibir hoja de vida] Candidato #77 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #77 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #77 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #77 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #78 ---
+[>>] Candidato #78 inicia proceso en t=77
+  -> [Recibir hoja de vida] Candidato #78 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #78 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #78 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #78 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #78 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #78 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #78 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #79 ---
+[>>] Candidato #79 inicia proceso en t=78
+  -> [Recibir hoja de vida] Candidato #79 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #79 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #79 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #79 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #80 ---
+[>>] Candidato #80 inicia proceso en t=79
+  -> [Recibir hoja de vida] Candidato #80 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #80 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #80 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #80 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #81 ---
+[>>] Candidato #81 inicia proceso en t=80
+  -> [Recibir hoja de vida] Candidato #81 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #81 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #81 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #81 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #81 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #81 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #81 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #81 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #81 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #81 procesado en 30 min por AnalistaJR
+[END] Candidato #81 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #82 ---
+[>>] Candidato #82 inicia proceso en t=81
+  -> [Recibir hoja de vida] Candidato #82 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #82 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #82 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #82 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #82 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #82 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #82 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #82 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Rechazado
+[END] Candidato #82 termina: No acept├│ oferta (ciclo: 2972 min)
+
+--- Candidato #83 ---
+[>>] Candidato #83 inicia proceso en t=82
+  -> [Recibir hoja de vida] Candidato #83 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #83 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #83 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #83 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #83 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #83 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #83 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #83 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #83 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #83 procesado en 30 min por AnalistaJR
+[END] Candidato #83 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #84 ---
+[>>] Candidato #84 inicia proceso en t=83
+  -> [Recibir hoja de vida] Candidato #84 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #84 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #84 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #84 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #84 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #84 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #84 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #84 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Rechazado
+[END] Candidato #84 termina: No acept├│ oferta (ciclo: 2972 min)
+
+--- Candidato #85 ---
+[>>] Candidato #85 inicia proceso en t=84
+  -> [Recibir hoja de vida] Candidato #85 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #85 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #85 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #85 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #86 ---
+[>>] Candidato #86 inicia proceso en t=85
+  -> [Recibir hoja de vida] Candidato #86 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #86 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #86 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #86 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #87 ---
+[>>] Candidato #87 inicia proceso en t=86
+  -> [Recibir hoja de vida] Candidato #87 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #87 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #87 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #87 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #87 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #87 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #87 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #87 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Rechazado
+[END] Candidato #87 termina: No acept├│ oferta (ciclo: 2972 min)
+
+--- Candidato #88 ---
+[>>] Candidato #88 inicia proceso en t=87
+  -> [Recibir hoja de vida] Candidato #88 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #88 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #88 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #88 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #89 ---
+[>>] Candidato #89 inicia proceso en t=88
+  -> [Recibir hoja de vida] Candidato #89 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #89 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #89 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #89 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #90 ---
+[>>] Candidato #90 inicia proceso en t=89
+  -> [Recibir hoja de vida] Candidato #90 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #90 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #90 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #90 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #90 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #90 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #90 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #90 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #90 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #90 procesado en 30 min por AnalistaJR
+[END] Candidato #90 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #91 ---
+[>>] Candidato #91 inicia proceso en t=90
+  -> [Recibir hoja de vida] Candidato #91 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #91 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #91 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #91 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #91 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #91 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #91 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #91 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #91 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #91 procesado en 30 min por AnalistaJR
+[END] Candidato #91 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #92 ---
+[>>] Candidato #92 inicia proceso en t=91
+  -> [Recibir hoja de vida] Candidato #92 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #92 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #93 ---
+[>>] Candidato #93 inicia proceso en t=92
+  -> [Recibir hoja de vida] Candidato #93 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #93 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #93 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #93 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #94 ---
+[>>] Candidato #94 inicia proceso en t=93
+  -> [Recibir hoja de vida] Candidato #94 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #94 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #94 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #94 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #94 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #94 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #94 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #95 ---
+[>>] Candidato #95 inicia proceso en t=94
+  -> [Recibir hoja de vida] Candidato #95 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #95 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #95 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #95 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #95 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #95 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #95 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #95 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #95 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #95 procesado en 30 min por AnalistaJR
+[END] Candidato #95 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #96 ---
+[>>] Candidato #96 inicia proceso en t=95
+  -> [Recibir hoja de vida] Candidato #96 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #96 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #96 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Rechazado
+[END] Candidato #96 termina: Rechazado - No super├│ evaluaciones (ciclo: 62 min)
+
+--- Candidato #97 ---
+[>>] Candidato #97 inicia proceso en t=96
+  -> [Recibir hoja de vida] Candidato #97 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Rechazado
+[END] Candidato #97 termina: Rechazado - No cumple perfil (ciclo: 60 min)
+
+--- Candidato #98 ---
+[>>] Candidato #98 inicia proceso en t=97
+  -> [Recibir hoja de vida] Candidato #98 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #98 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #98 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #98 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #98 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #98 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #98 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #98 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #98 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #98 procesado en 30 min por AnalistaJR
+[END] Candidato #98 termina: Contratado exitosamente (ciclo: 4262 min)
+
+--- Candidato #99 ---
+[>>] Candidato #99 inicia proceso en t=98
+  -> [Recibir hoja de vida] Candidato #99 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #99 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #99 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #99 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #99 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #99 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Rechazado
+  [XOR] Gateway [┬┐Segunda oportunidad?]: Rechazado
+[END] Candidato #99 termina: Rechazado - Segundo filtro (cultura) (ciclo: 212 min)
+
+--- Candidato #100 ---
+[>>] Candidato #100 inicia proceso en t=99
+  -> [Recibir hoja de vida] Candidato #100 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Cumple requisitos?]: Aprobado
+  -> [Ejecutar test de resiliencia] Candidato #100 procesado en 1 min por AnalistaJR
+  -> [Evaluar ambici├│n] Candidato #100 procesado en 1 min por AnalistaJR
+  [XOR] Gateway [Primera selecci├│n]: Aprobado
+  -> [Entrevistas psicot├®cnicas] Candidato #100 procesado en 30 min por AnalistaJR
+  -> [Evaluaci├│n 360] Candidato #100 procesado en 60 min por AnalistaJR
+  -> [Entrevista final] Candidato #100 procesado en 60 min por AnalistaJR
+  [XOR] Gateway [┬┐Aprob├│ entrevista?]: Aprobado
+  -> [Inducci├│n] Candidato #100 procesado en 2520 min por AnalistaJR
+  -> [Assessment Center] Candidato #100 procesado en 240 min por GerenteLider
+  [XOR] Gateway [┬┐Acept├│ oferta?]: Aprobado
+  -> [Verificaci├│n de antecedentes Offline] Candidato #100 procesado en 1260 min por GerenteLider
+  -> [Contrataci├│n del agente] Candidato #100 procesado en 30 min por AnalistaJR
+[END] Candidato #100 termina: Contratado exitosamente (ciclo: 4262 min)
+
+
+
+=== M├ëTRICAS DEL PROCESO ===
+Candidatos iniciados: 100
+Candidatos completados: 100
+
+Resultados por raz├│n:
+  Contratado exitosamente: 34 (34%)
+  No acept├│ oferta: 5 (5%)
+  Rechazado - No cumple perfil: 9 (9%)
+  Rechazado - No super├│ evaluaciones: 36 (36%)
+  Rechazado - Segundo filtro (cultura): 14 (14%)
+  Referido a otro puesto: 2 (2%)
+
+=== REPORTE DE RECURSOS ===
+
+Recurso: AnalistaJR
+  Disponibles: 5
+  Tiempo usado: 1895.53 horas
+  Costo total: $18955.3
+  Utilizaci├│n promedio: 0%
+
+Recurso: GerenteLider
+  Disponibles: 5
+  Tiempo usado: 870 horas
+  Costo total: $43500
+  Utilizaci├│n promedio: 0%
+
+=== TIEMPO DE CICLO ===
+Promedio: 1659.32 minutos (27.6553 horas)
+ (3.95076 d├¡as laborables)
+
+
+=========================================================
+              COMPARACION CON BIZAGI                  
+=========================================================
+
+Este motor BPMN replica el diseno de Bizagi en codigo.
+Ventajas del codigo:
+  [OK] Control de versiones (Git)
+  [OK] Logica de negocio compleja
+  [OK] Integracion con APIs/DB
+  [OK] Testing automatizado
+  [OK] Simulaciones reproducibles
+
+Ambos enfoques son complementarios:
+  * Bizagi: Diseno visual y validacion rapida
+  * Codigo: Implementacion y automatizacion
+
+[INSIGHT] Para People Analytics: dominar ambos es el diferenciador.
+

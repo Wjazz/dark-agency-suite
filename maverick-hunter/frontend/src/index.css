@@ -1,0 +1,295 @@
+:root {
+  --color-maverick: #00d4ff;
+  --color-performer: #10b981;
+  --color-reliable: #fbbf24;
+  --color-monitor: #f97316;
+  --color-risk: #ef4444;
+  
+  --bg-dark: #0f0f23;
+  --bg-card: #1a1a2e;
+  --bg-input: #16213e;
+  
+  --text-primary: #e4e4e7;
+  --text-secondary: #a1a1aa;
+  
+  --border: #27272a;
+  --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--bg-card) 0%, #1e1e36 100%);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--color-maverick), #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.header .tagline {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Assessment Progress */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-input);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-maverick), #a855f7);
+  transition: width 0.3s ease;
+}
+
+/* Question */
+.question {
+  margin-bottom: 2rem;
+}
+
+.question-text {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.question-text-es {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* Likert Scale */
+.likert-scale {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.likert-option {
+  flex: 1;
+  max-width: 80px;
+  padding: 1rem;
+  background: var(--bg-input);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.likert-option:hover {
+  border-color: var(--color-maverick);
+  transform: translateY(-2px);
+}
+
+.likert-option.selected {
+  background: var(--color-maverick);
+  border-color: var(--color-maverick);
+  color: var(--bg-dark);
+}
+
+.likert-option .number {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.likert-option .label {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.likert-option.selected .label {
+  color: var(--bg-dark);
+}
+
+/* Buttons */
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--color-maverick), #a855f7);
+  color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+/* Result */
+.result-card {
+  text-align: center;
+}
+
+/* Semaphore */
+.semaphore {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  box-shadow: 0 0 60px currentColor;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.semaphore.cyan { background: var(--color-maverick); color: var(--color-maverick); }
+.semaphore.green { background: var(--color-performer); color: var(--color-performer); }
+.semaphore.yellow { background: var(--color-reliable); color: var(--color-reliable); }
+.semaphore.orange { background: var(--color-monitor); color: var(--color-monitor); }
+.semaphore.red { background: var(--color-risk); color: var(--color-risk); }
+
+.classification-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.classification-name.cyan { color: var(--color-maverick); }
+.classification-name.green { color: var(--color-performer); }
+.classification-name.yellow { color: var(--color-reliable); }
+.classification-name.orange { color: var(--color-monitor); }
+.classification-name.red { color: var(--color-risk); }
+
+.recommendation {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.metric {
+  background: var(--bg-input);
+  padding: 1.25rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value.positive { color: var(--color-performer); }
+.metric-value.neutral { color: var(--color-reliable); }
+.metric-value.negative { color: var(--color-risk); }
+
+/* Demo Mode Banner */
+.demo-banner {
+  background: linear-gradient(90deg, #a855f7, var(--color-maverick));
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--bg-dark);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+/* Confidence Bar */
+.confidence-bar {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-input);
+  border-radius: 3px;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: var(--color-performer);
+}

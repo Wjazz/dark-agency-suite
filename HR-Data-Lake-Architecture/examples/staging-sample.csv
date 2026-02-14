@@ -1,0 +1,11 @@
+employee_id,dni,nombre_completo,fecha_nacimiento,genero,estado_civil,email_corporativo,departamento_cod,puesto,fecha_ingreso,salario_base,salario_bruto
+10234,12345678,Juan Carlos Pérez García,1990-05-15,M,Casado,jperez@empresa.com,VEN,Analista de Ventas,2022-03-01,5000.00,5500.00
+10567,23456789,María Fernanda García López,1988-11-20,F,Soltera,mgarcia@empresa.com,TI,Desarrolladora Senior,2020-01-15,7000.00,7500.00
+10892,34567890,Carlos Alberto Quispe Mamani,1995-07-08,M,Soltero,cquispe@empresa.com,FIN,Analista Financiero,2023-06-10,4500.00,5000.00
+11023,45678901,Ana Lucía Torres Vega,1992-03-25,F,Casada,atorres@empresa.com,RRHH,Coordinadora de Selección,2021-09-01,6000.00,6800.00
+11156,56789012,Roberto Miguel Castillo Rojas,1987-12-30,M,Divorciado,rcastillo@empresa.com,OPS,Gerente de Operaciones,2019-04-20,12000.00,13500.00
+11289,67890123,Patricia Elena Mendoza Silva,1994-08-14,F,Soltera,pmendoza@empresa.com,MKT,Especialista en Marketing Digital,2022-11-05,5500.00,6200.00
+11402,78901234,Luis Fernando Salazar Cruz,1991-01-22,M,Casado,lsalazar@empresa.com,VEN,Ejecutivo de Ventas,2023-02-14,4800.00,5800.00
+11535,89012345,Carmen Rosa Huamán Flores,1989-06-17,F,Casada,chuaman@empresa.com,TI,Analista de Sistemas,2020-07-30,6500.00,7000.00
+11668,90123456,Jorge Raúl Vargas Díaz,1993-10-05,M,Soltero,jvargas@empresa.com,FIN,Contador,2021-12-01,5200.00,5700.00
+11,Pedro Pablo Sánchez Morales,1996-04-11,M,Soltero,psanchez@empresa.com,OPS,Coordinador de Logística,2024-01-15,4200.00,4700.00

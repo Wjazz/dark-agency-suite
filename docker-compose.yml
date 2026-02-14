@@ -1,0 +1,55 @@
+services:
+  # -------------------------------
+  # 1. MAVERICK HUNTER (Full Stack)
+  # -------------------------------
+  maverick-backend:
+    build: 
+      context: ./maverick-hunter/backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./maverick-hunter/backend:/app
+    environment:
+      - DATABASE_URL=sqlite:///./maverick.db
+    networks:
+      - dark-agency-net
+
+  maverick-frontend:
+    build: 
+      context: ./maverick-hunter/frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - maverick-backend
+    networks:
+      - dark-agency-net
+
+  # -------------------------------
+  # 2. FOUNDER RISK AI (Inteligencia)
+  # -------------------------------
+  founder-risk-api:
+    build: 
+      context: ./founder-risk-ai/backend
+    ports:
+      - "8001:8000" # Mapeamos al 8001 para no chocar
+    volumes:
+      - ./founder-risk-ai/backend:/app
+    networks:
+      - dark-agency-net
+
+  # -------------------------------
+  # 3. STRESS TEST (Simulación)
+  # -------------------------------
+  stress-test-engine:
+    build: 
+      context: ./stress-test/backend
+    ports:
+      - "8002:8000" # Mapeamos al 8002
+    volumes:
+      - ./stress-test/backend:/app
+    networks:
+      - dark-agency-net
+
+networks:
+  dark-agency-net:
+    driver: bridge

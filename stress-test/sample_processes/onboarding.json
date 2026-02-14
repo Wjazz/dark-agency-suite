@@ -1,0 +1,99 @@
+{
+    "name": "Employee Onboarding Process",
+    "description": "Standard HR onboarding flow with multiple approval gates",
+    "start": "start",
+    "end": "end",
+    "nodes": [
+        {
+            "id": "start",
+            "name": "New Hire Request",
+            "type": "start",
+            "next": [
+                "hr_review"
+            ]
+        },
+        {
+            "id": "hr_review",
+            "name": "HR Initial Review",
+            "type": "approval",
+            "wait_time": 3,
+            "approval_probability": 0.95,
+            "next": [
+                "dept_approval"
+            ]
+        },
+        {
+            "id": "dept_approval",
+            "name": "Department Manager Approval",
+            "type": "approval",
+            "wait_time": 5,
+            "approval_probability": 0.85,
+            "next": [
+                "budget_check"
+            ]
+        },
+        {
+            "id": "budget_check",
+            "name": "Budget Verification",
+            "type": "approval",
+            "wait_time": 8,
+            "approval_probability": 0.75,
+            "next": [
+                "vp_approval"
+            ]
+        },
+        {
+            "id": "vp_approval",
+            "name": "VP Final Approval",
+            "type": "approval",
+            "wait_time": 10,
+            "approval_probability": 0.90,
+            "next": [
+                "create_accounts"
+            ]
+        },
+        {
+            "id": "create_accounts",
+            "name": "Create System Accounts",
+            "type": "task",
+            "base_time": 2,
+            "next": [
+                "equipment_request"
+            ]
+        },
+        {
+            "id": "equipment_request",
+            "name": "Equipment Request",
+            "type": "approval",
+            "wait_time": 7,
+            "approval_probability": 0.80,
+            "next": [
+                "access_cards"
+            ]
+        },
+        {
+            "id": "access_cards",
+            "name": "Access Card Creation",
+            "type": "task",
+            "base_time": 1,
+            "next": [
+                "orientation"
+            ]
+        },
+        {
+            "id": "orientation",
+            "name": "New Hire Orientation",
+            "type": "task",
+            "base_time": 3,
+            "next": [
+                "end"
+            ]
+        },
+        {
+            "id": "end",
+            "name": "Onboarding Complete",
+            "type": "end",
+            "next": []
+        }
+    ]
+}

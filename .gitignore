@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+.venv/
+venv/
+*.env
+
+# Bases de datos y logs
+*.sqlite3
+*.db
+*.log
+
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.rpm
+*.exe
+*.msi
+*.zip
+*.exe
+*.dll
+*.ps1
