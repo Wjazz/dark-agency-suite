@@ -1,0 +1,77 @@
+version: '3.8'
+
+services:
+  # 1. Backend Principal
+  maverick-backend:
+    build: ./maverick-hunter/backend
+    ports:
+      - "8000:8000"
+    networks:
+      - dark-agency-net
+    volumes:
+      - ./maverick-hunter/backend/app:/app/app
+
+  # 2. Frontend
+  maverick-frontend:
+    build: ./maverick-hunter/frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - dark-agency-net
+    depends_on:
+      - maverick-backend
+
+  # 3. Riesgo Fundador
+  founder-risk-api:
+    build: ./founder-risk-api/backend
+    ports:
+      - "8001:8000"
+    networks:
+      - dark-agency-net
+
+  # 4. Stress Test Climático
+  stress-test-engine:
+    build: ./stress-test/backend
+    ports:
+      - "8002:8000"
+    networks:
+      - dark-agency-net
+
+  # 5. Quant Engine (Red Neuronal)
+  quant-engine:
+    build: ./quant-engine
+    ports:
+      - "8003:8000"
+    networks:
+      - dark-agency-net
+
+  # 6. Strategy Engine (Teoría de Juegos)
+  strategy-engine:
+    build: ./strategy-engine
+    ports:
+      - "8004:8000"
+    networks:
+      - dark-agency-net
+
+  # 7. Causal Engine (Econometría Avanzada)
+  causal-engine:
+    build: ./causal-engine
+    ports:
+      - "8005:8000"
+    networks:
+      - dark-agency-net
+
+  # 8. Geo-Causal Engine (Corregido: Ahora está dentro de 'services')
+  geo-causal-engine:
+    build: 
+      context: ./geo-causal-engine
+    container_name: bourbaki-geo-causal-engine-1
+    ports:
+      - "8006:8000"
+    restart: always
+    networks:
+      - dark-agency-net  # Cambiado para coincidir con el resto
+
+networks:
+  dark-agency-net:
+    driver: bridge
