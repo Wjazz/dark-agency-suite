@@ -1,0 +1,102 @@
+{
+  "type": "record",
+  "name": "Employee",
+  "namespace": "hr.nominas",
+  "doc": "Esquema Avro para datos de empleados en Raw Layer",
+  "fields": [
+    {
+      "name": "employee_id",
+      "type": "int",
+      "doc": "Identificador único del empleado"
+    },
+    {
+      "name": "dni",
+      "type": "string",
+      "doc": "Documento Nacional de Identidad (8 dígitos)"
+    },
+    {
+      "name": "nombre_completo",
+      "type": "string",
+      "doc": "Nombre y apellidos completos"
+    },
+    {
+      "name": "fecha_nacimiento",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "Fecha de nacimiento (formato Avro date)"
+    },
+    {
+      "name": "genero",
+      "type": {
+        "type": "enum",
+        "name": "Genero",
+        "symbols": ["M", "F", "O"]
+      },
+      "doc": "Género del empleado"
+    },
+    {
+      "name": "estado_civil",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Estado civil (opcional)"
+    },
+    {
+      "name": "email_corporativo",
+      "type": "string",
+      "doc": "Correo electrónico de la empresa"
+    },
+    {
+      "name": "departamento_cod",
+      "type": "string",
+      "doc": "Código del departamento (3 caracteres)"
+    },
+    {
+      "name": "puesto",
+      "type": "string",
+      "doc": "Título del puesto"
+    },
+    {
+      "name": "fecha_ingreso",
+      "type": {
+        "type": "int",
+        "logicalType": "date"
+      },
+      "doc": "Fecha de contratación"
+    },
+    {
+      "name": "salario_base",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 10,
+        "scale": 2
+      },
+      "doc": "Salario base mensual en soles peruanos"
+    },
+    {
+      "name": "salario_bruto",
+      "type": {
+        "type": "bytes",
+        "logicalType": "decimal",
+        "precision": 10,
+        "scale": 2
+      },
+      "doc": "Salario bruto total (base + bonos)"
+    },
+    {
+      "name": "_ingestion_timestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Timestamp de ingesta al Raw Layer (metadato ETL)"
+    },
+    {
+      "name": "_source_file",
+      "type": "string",
+      "doc": "Archivo de origen en Staging (trazabilidad)"
+    }
+  ]
+}
